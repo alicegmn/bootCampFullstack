@@ -1,15 +1,70 @@
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5DC;
+    color: #2F2F2F;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+nav {
+    background-color: #8B0000;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 1.5rem
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+
 }
 
-h1 h2 h3 h4 h5 h6 {
-    font-family: bebas neue;
+nav a {
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+nav a:hover {
+    color: #FFBF00;   
+}
+
+button {
+    background-color: #FFBF00;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.button-login {
+    position: absolute;
+    right: 1rem;
+    align-self: center;
 }
