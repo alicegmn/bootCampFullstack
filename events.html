@@ -12,20 +12,18 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Huvudnavigation">
             <div class="site-logo">
-                <a href="/index.html">Drickavin.se</a>
+                <a href="/index.html" aria-label="Gå till startsidan">Drickavin.se</a>
             </div>
-            <button class="hamburger" aria-label="Öppna meny">Meny ☰</button>
-            <div class="nav-menu">
+            <button class="hamburger" aria-label="Öppna meny" aria-expanded="false" aria-controls="nav-menu">Meny ☰</button>
+            <div class="nav-menu" id="nav-menu">
                 <ul>
-                    <li><a href="/vinbarer.html">Vinbarer</a></li>
-                    <li><a href="/vinskolan.html">Vinskolan</a></li>
-                    <li><a href="/events.html">Events</a></li>
+                    <li><a href="/vinbarer.html" aria-label="Gå till vinbarer">Vinbarer</a></li>
+                    <li><a href="/vinskolan.html" aria-label="Gå till vinskolan">Vinskolan</a></li>
+                    <li><a href="/events.html" aria-label="Gå till events">Events</a></li>
+                    <li><a href="/logga-in.html" aria-label="Logga in på ditt konto">Logga in</a></li>
                 </ul>
-                <button class="button-login">
-                    <a href="/logga-in.html">Logga in</a>
-                </button>
             </div>
         </nav>
     </header>

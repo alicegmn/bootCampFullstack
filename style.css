@@ -32,6 +32,12 @@ nav {
   height: 7vh;
 }
 
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* Logo styling (i hedaer och footer ) */
 .site-logo a {
   font-family: "Bebas Neue", sans-serif;
@@ -68,30 +74,6 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.nav-menu ul li {
-  margin-bottom: 1rem;
-}
-
-.button-login {
-  margin-top: 0.5rem;
-  background-color: #FFBF00;
-  color: #8B0000;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button-login a {
-  color: #8B0000;
-  text-decoration: none;
-}
-
-.button-login:hover {
-  background-color: #FFD700;
 }
 
 /* Visa nav-menyn när den är aktiv */
@@ -147,7 +129,7 @@ h3 {
   }
 
 .hero-content {
-    background-color: #2F2F2F(0, 0, 0, 0.5); /* Halvgenomskinlig svart bakgrund för bättre läsbarhet */
+    background-color: #000(0, 0, 0, 0.5); /* Halvgenomskinlig svart bakgrund för bättre läsbarhet */
     width: 100%;
     height: 100%;
     padding: 2rem;
@@ -157,19 +139,6 @@ h3 {
     justify-content: center;
     text-align: center;
     color: #fff; /* Vit text för bättre kontrast mot bakgrunden */
-    
-    button {
-      background-color: #F5F5DC;
-      padding: 1rem 1.5rem;
-      color: #2F2F2F;
-    }
-
-    a:hover {
-      color: #F5F5DC;
-    }
-    button:hover {
-      background-color: #FFBF00;
-    }
   }
 
 button {
@@ -182,6 +151,14 @@ button {
     border-radius: 0.3rem;
     cursor: pointer;
     margin: 1rem 0 1.5rem 0;
+    align-self: center;
+}
+
+button:hover {
+  background-color: #F5F5DC;
+  border: 2px solid #8B0000;
+  color: #8B0000;
+  transition: background-color 0.3s ease;
 }
 
 /* Stilar för formuläret för bättre läsbarhet */
@@ -203,12 +180,35 @@ form {
   padding: 2rem 1rem;
 }
 
+.vinbarer-intro {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
 .vinbarer-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.vinbarer-wrapper main {
+  grid-area: main;
+}
+
+.vinbarer-wrapper aside {
+  grid-area: aside;
+}
+
+.vinbarer-wrapper {
+  margin-top: 8vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "main"
+  "aside";
 }
 
 .vinbarer-card {
@@ -316,8 +316,6 @@ form {
   padding: 2rem 1rem;
 }
 
-
-
 /* Footer-specifika stilar */
 .site-footer {
     background-color: #8B0000;
@@ -362,32 +360,32 @@ form {
    .hamburger {
         display: none; /* Dölj hamburgermenyn */
     }
+
+    header {
+      padding: 1rem;
+    }
+
+    nav {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+    }
     .nav-menu {
+      padding: 0;
       display: flex; /* Visa navigationen */
       position: static; /* Återställ position */
       flex-direction: row;
       align-items: center; /* Centrera vertikalt */
-      justify-content: space-between; /* Centrera innehållet horisontellt */
-  }
-    .nav-menu ul {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      align-items: center; /* Centrera vertikalt */
-      height: 100%; /* Fyll ut hela höjden */
-      margin: 0;
+      justify-content: center;
+      align-content: center;
+      }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
   }
 
-  .nav-menu ul li {
-    margin: 0;
-    height: 100%; /* Fyll ut hela höjden */
-    display: flex;
-    align-items: center; /* Centrera länktexten vertikalt */
-}
-.button-login {
-  margin-top: 0; /* Justera för att ligga i linje */
-  margin-left: auto; /* Flytta login-knappen till höger */
-}
 .site-logo {
   margin-right: 1rem; /* Lägg till lite mellanrum mellan loggan och menyn */
 }
@@ -405,6 +403,13 @@ form {
   }
   
   @media screen and (min-width: 800px) {
+    .vinbarer-wrapper {
+      grid-template-columns: (3fr 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+      "main" "main" "main" "aside";
+    }
+
     .vinbarer-container {
       grid-template-columns: repeat(3, 1fr);
     }

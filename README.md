@@ -13,7 +13,7 @@ Instruktioner för hur man öppnar och navigerar på webbplatsen:
 Kortfattad teknisk beskrivning av hur jag uppfyller kraven.
 - Semantiska HTML-element används genomgående, t.ex. <header>, <nav>, <main>, <section>, <article>, och <footer>. Men också <form>, <address>, <button>, <img> och så vidare.
 - Webbplatsen innehåller en hemsida (index.html) och flera undersidor (vinskolan.html, vinbarer.html, events.html, logga-in.html). Dock är endast index.html och vinbarer.html "klara" fullständiga sidor.
-- En konsekvent navigationsmeny som är responsiv med hjälp av media queries med hambrugermeny på stora skärmar, finns med i headern på alla sidor.
+- En konsekvent navigationsmeny som är responsiv med hjälp av media queries med hambrugermeny på stora skärmar, finns med i headern på alla sidor. Hamburgarmenyn har även texten meny bredvid sig för ökad tillgänglighet.
 – Responsiv design med Flexbox i nav-bar, footer och formuläret på Logga in sidan. Grid används för t.ex vinbarer-container och .vinskolan-container. Samt hela layouten på sidan vinbarer.html.
 – Media queries används för att anpassa layouten för olika skärmstorlekar.
 – Jag har försökr organisera min CSS i en logisk struktur från toppen till botten och media queries längst ner, och beskrivande klassnamn + id:n och mobile first.
@@ -21,8 +21,8 @@ Kortfattad teknisk beskrivning av hur jag uppfyller kraven.
 – Clamp används för att hantera textstorlekar, t.ex. font-size: clamp(14px, 2vw, 24px); för paragrafer.
 – Alt-attribut används för bilder.
 – Korrekt rubrikstruktur implementeras med <h1> till <h3>.
-– Färgkontrast mellan text och bakgrund är tillräcklig.
+– Färgkontrasten mellan text och bakgrund är tillräcklig överaallt.
 – Beskrivande länkar och knappar används, t.ex. aria-label för sociala medier-ikoner.
-– Chrome DevTools har använts för att testa responsivitet och debugga HTML/CSS-problem.
+– Chrome DevTools har använts för att testa responsivitet och debugga HTML/CSS-problem. Särskilda problem hade jag med min nav helt plötsligt, då var DevTools kanon för att hitta vilken padding som krånglade.
 – Wave och/eller Lighthouse har använts för att förbättra tillgängligheten, men detta framgår inte direkt av koden.
 – GitHub repo har använts för versionshantering, med en developer branch och en main branch som mergade in till när jag var klar med sidan.
