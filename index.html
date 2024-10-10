@@ -13,43 +13,40 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Huvudnavigation">
             <div class="site-logo">
-                <a href="/index.html">Drickavin.se</a>
+                <a href="/index.html" aria-label="Gå till startsidan">Drickavin.se</a>
             </div>
-            <button class="hamburger" aria-label="Öppna meny">☰</button>
-            <div class="nav-menu">
+            <button class="hamburger" aria-label="Öppna meny" aria-expanded="false" aria-controls="nav-menu">Meny ☰</button>
+            <div class="nav-menu" id="nav-menu">
                 <ul>
-                    <li><a href="/vinbarer.html">Vinbarer</a></li>
-                    <li><a href="/vinskolan.html">Vinskolan</a></li>
-                    <li><a href="/events.html">Events</a></li>
+                    <li><a href="/vinbarer.html" aria-label="Gå till vinbarer">Vinbarer</a></li>
+                    <li><a href="/vinskolan.html" aria-label="Gå till vinskolan">Vinskolan</a></li>
+                    <li><a href="/events.html" aria-label="Gå till events">Events</a></li>
                 </ul>
-                <button class="button-login">
-                    <a href="/logga-in.html">Logga in</a>
-                </button>
+                <a href="/logga-in.html" class="button-login" aria-label="Logga in på ditt konto">Logga in</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <hero class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero-content">
-                <h1>Drickavin.se</h1>
-                <p>Utforska vinbarer i hela Sverige, lär dig mer om vinet du dricker i vår vinskola och dela ditt intresse med andra vinälskare i <a href="/logga-in.html">vinklubben</a>.</p>
-                <button class="button-login">
-                    <a href="/logga-in.html">Gå med i vinklubben</a>
-                </button>
+                <h1 id="hero-title">Drickavin.se</h1>
+                <p>Utforska vinbarer i hela Sverige, lär dig mer om vinet du dricker i vår vinskola och dela ditt intresse med andra vinälskare i vinklubben.</p>
+                <a href="/logga-in.html" class="button-login" aria-label="Gå med i vinklubben">Gå med i vinklubben</a>
             </div>
-        </hero>
-        <section class="vinbarer">
-            <h2>Populära vinbarer</h2>
+        </section>
+        
+        <section class="vinbarer" aria-labelledby="vinbarer-title">
+            <h2 id="vinbarer-title">Populära vinbarer</h2>
             <div class="vinbarer-container">
-                <article class="vinbarer-card" href="https://etteetteette.dk/pompette/" target="_blank">
-                    <img src="https://starwinelist.com/storage/images/venue/931/1960x1082/hWWYIGN5wlOEZsggkwbmmsgULKeCh4QaDANy4I2z.jpeg?signature=2338e9364a45cd2eeecdccf27ca003416214614d41586a4fb4fe6f47576dc916" alt="Pompette">
+                <article class="vinbarer-card">
+                    <img src="https://starwinelist.com/storage/images/venue/931/1960x1082/hWWYIGN5wlOEZsggkwbmmsgULKeCh4QaDANy4I2z.jpeg?signature=2338e9364a45cd2eeecdccf27ca003416214614d41586a4fb4fe6f47576dc916" alt="Interiör av Pompette vinbar">
                     <div class="vinbarer-card-content">
                         <h3>Pompette</h3>
                         <p>Kvalitativa naturviner i en spartansk källarlokal på Nørrebro.</p>
-                        <address><a href="https://maps.app.goo.gl/sKWA3XFqr1TbLu9z8" target="_blank">Møllegade 3, Köpenhamn</a></address>
+                        <address><a href="https://maps.app.goo.gl/sKWA3XFqr1TbLu9z8" target="_blank" rel="noopener noreferrer" aria-label="Visa Pompette på Google Maps (öppnas i ny flik)">Møllegade 3, Köpenhamn</a></address>
                     </div>
                 </article>
                 <article class="vinbarer-card" href="https://bise.se/" target="_blank">
@@ -57,7 +54,7 @@
                     <div class="vinbarer-card-content">
                         <h3>BISe</h3>
                         <p>Fransk vinbar i Malmö med gedigen vinlista och familjär stämning.</p>
-                        <address><a href="https://maps.app.goo.gl/Uw7kJ4n86AkNJJCy8" target="_blank">Norra Vallgatan 88, Malmö</a></address>
+                        <address><a href="https://maps.app.goo.gl/Uw7kJ4n86AkNJJCy8" target="_blank" rel="noopener noreferrer" aria-label="Visa BISe på Google Maps (öppnas i ny flik)">Norra Vallgatan 88, Malmö</a></address>
                     </div>
                 </article>
                 <article class="vinbarer-card" href="https://www.rexumea.com/" target="_blank">
@@ -65,7 +62,7 @@
                     <div class="vinbarer-card-content">
                         <h3>Rex</h3>
                         <p>På Rådhustorget hittar vi en riktig klassiker i Umeås krogliv. Här breder fransoserna ut sig på vinlistan.</p>
-                        <address><a href="https://g.co/kgs/61Ga7az" target="_blank">Rådhustorget 1, Umeå</a></address>
+                        <address><a href="https://g.co/kgs/61Ga7az" target="_blank" rel="noopener noreferrer" aria-label="Visa Rex på Google Maps (öppnas i ny flik)">Rådhustorget 1, Umeå</a></address>
                     </div>
                 </article>
                 <article class="vinbarer-card" href="https://meetlyrestauranger.se/" target="_blank">
@@ -73,21 +70,22 @@
                     <div class="vinbarer-card-content">
                         <h3>Meetly Vallastaden</h3>
                         <p>Förvänta dig temakvällar, vinprovningar och Wine-Dining på denna pärla nära campus. Slatt-tisdagarna när helgens öppnade flaskor töms till en billig peng är populära!</p>
-                        <address><a href="https://maps.app.goo.gl/ZXAh3jGLVMtkkW526" target="_blank">Selma Lagerlöfs Gata 1, Linköping</a></address>
+                        <address><a href="https://maps.app.goo.gl/ZXAh3jGLVMtkkW526" target="_blank" rel="noopener noreferrer" aria-label="Visa Meetly Vallastaden på Google Maps (öppnas i ny flik)">Selma Lagerlöfs Gata 1, Linköping</a></address>
                     </div>
                 </article>
             </div>
-            <a href="/vinbarer.html"><button>Hitta nästa vinbar att besöka</button></a>
+            <a href="/vinbarer.html"><button aria-label="Se fler vinbarer att besöka">Hitta nästa vinbar att besöka</button></a>
         </section>
-        <section class="vinskolan">
-            <h2>Nyheter från vinskolan</h2>
+
+        <section class="vinskolan" aria-labelledby="vinskolan-title">
+            <h2 id="vinskolan-title">Nyheter från vinskolan</h2>
             <div class="vinskolan-container">
                 <article class="vinskolan-card">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5eb1211225719420f0c80392/757ef8cf-386e-4030-b8c4-14643a2b5724/matassa.jpg?format=1000w" alt="Naturviner">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5eb1211225719420f0c80392/757ef8cf-386e-4030-b8c4-14643a2b5724/matassa.jpg?format=1000w" alt="Flaskor med naturvin">
                     <div class="vinskolan-card-content">
                         <h3>Lär dig om naturviner</h3>
                         <p>Upptäck naturvinernas värld och lär dig skillnaden mellan naturvin och konventionellt vin.</p>
-                        <a href="/vinskolan/naturviner.html">Läs mer</a>
+                        <a href="/vinskolan/naturviner.html" aria-label="Läs mer om naturviner">Läs mer om naturviner</a>
                     </div>
                 </article>
                 <article class="vinskolan-card">
@@ -95,7 +93,7 @@
                     <div class="vinskolan-card-content">
                         <h3>Vinprovning för nybörjare</h3>
                         <p>En guide till hur du genomför en vinprovning hemma med vänner och familj.</p>
-                        <a href="/vinskolan/vinprovning-for-nyborjare.html">Läs mer</a>
+                        <a href="/vinskolan/vinprovning-for-nyborjare.html" aria-label="Läs mer om vinprovning för nybörjare">Läs mer om vinprovningar</a>
                     </div>
                 </article>
                 <article class="vinskolan-card">
@@ -103,7 +101,7 @@
                     <div class="vinskolan-card-content">
                         <h3>Vinregioner i Frankrike</h3>
                         <p>Utforska de klassiska vinregionerna i Frankrike och deras unika karaktäristik.</p>
-                        <a href="/vinskolan/franska-vinregioner.html">Läs mer</a>
+                        <a href="/vinskolan/franska-vinregioner.html" aria-label="Läs mer om vinregioner i Frankrike">Läs mer om franska vinregioner</a>
                     </div>
                 </article>
                 <article class="vinskolan-card">
@@ -111,47 +109,44 @@
                     <div class="vinskolan-card-content">
                         <h3>Vin och mat - perfekta kombinationer</h3>
                         <p>Lär dig grunderna i att para ihop vin med mat för en förhöjd matupplevelse.</p>
-                        <a href="/vinskolan/vin-och-mat.html">Läs mer</a>
+                        <a href="/vinskolan/vin-och-mat.html" aria-label="Läs mer om vin och mat">Läs mer om att kombinera vin och mat</a>
                     </div>
                 </article>
             </div>
-            <a href="/vinskolan.html"><button>Lär dig mer om vin</button></a> 
+            <a href="/vinskolan.html"><button aria-label="Gå till vinskolan för att lära dig mer">Lär dig mer om vin</button></a> 
         </section>
-        <section class="vinklubben">
-            <h2>Gå med i vinklubben</h2>
+
+        <section class="vinklubben" aria-labelledby="vinklubben-title">
+            <h2 id="vinklubben-title">Är du redo att gå med i vinklubben?</h2>
             <div class="vinklubben-container">
                 <article>
-                        <p>Dela ditt stora intresse för vin med andra vinälskare. Som medlem i vinklubben får du fri tillgång till allt innehåll i vinskolan med tillhörande certifieringar och möjlighet att delta i välkurerade vinprovningar och andra evenemang. Välkommen!</p>
+                    <p>Klubben för alla vinälskare.Som medlem i vinklubben får du fri tillgång till allt innehåll i vinskolan med tillhörande certifieringar och möjlighet att delta i välkurerade vinprovningar och andra evenemang. Välkommen!</p>
                 </article>
             </div>
-            <button class="button-login">
-                <a href="/logga-in.html">Gå med i vinklubben</a>
-            </button>
+            <a href="/logga-in.html" class="button-login" aria-label="Gå med i vinklubben">Gå med i vinklubben</a>
         </section>
-   
     </main>
+
     <footer class="site-footer">
         <div class="footer-content">
             <div class="site-logo">
-                <a href="/index.html">Drickavin.se</a>
+                <a href="/index.html" aria-label="Gå till startsidan">Drickavin.se</a>
             </div>
             <div class="social-links">
-                <a href="#" target="_blank" aria-label="Följ oss på Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank" aria-label="Följ oss på Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Följ oss på Facebook (öppnas i ny flik)"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Följ oss på Instagram (öppnas i ny flik)"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Drickavin.se. Alla rättigheter förbehållna.</p>
         </div>
     </footer>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
+        document.querySelector('.hamburger').addEventListener('click', function () {
             const navMenu = document.querySelector('.nav-menu');
-    
-            hamburger.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
+            navMenu.classList.toggle('active');
+            this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
         });
     </script>
 </body>

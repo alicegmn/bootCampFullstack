@@ -1,7 +1,7 @@
 .bebas-neue-regular {
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 200;
+    font-style: oblique;
   }
 
 body {
@@ -12,62 +12,126 @@ body {
     color: #2F2F2F;
 }
 
-/* Generell logotypstil som används i både header och footer */
-.site-logo a {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2.5rem;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.2s ease;
+/* Grundläggande styling för header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #8B0000;
+  color: #fff;
+  z-index: 1000;
+  font-family: "Bebas Neue", sans-serif;
 }
 
-.site-logo a:hover {
-    color: #FFBF00;
+/* Grundläggande styling för navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  height: 7vh;
+}
+
+/* Logo styling (i hedaer och footer ) */
+.site-logo a {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Hamburger-meny för små skärmar */
+.hamburger {
+  display: block;
+  background: none;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+}
+
+/* Nav-meny för små skärmar */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #8B0000;
+  padding: 1rem;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu ul li {
+  margin-bottom: 1rem;
 }
 
 .button-login {
-    right: 1rem;
+  margin-top: 0.5rem;
+  background-color: #FFBF00;
+  color: #8B0000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-nav {
-    background-color: #8B0000;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.5rem;
-    position: fixed;
-    width: 100%;
-    height: 5vh;
-    top: 0;
-    
-    .site-logo {
-        font-size: clamp(1rem, 2vw, 2rem);
-        margin: 0;
-        padding: 0;
-    }
+.button-login a {
+  color: #8B0000;
+  text-decoration: none;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 0.5rem;
-
+.button-login:hover {
+  background-color: #FFD700;
 }
 
-nav a {
-    color: #fff;
-    font-family: "Bebas Neue", sans-serif;
+/* Visa nav-menyn när den är aktiv */
+.nav-menu.active {
+  display: flex;
 }
 
-nav a:hover {
-    color: #FFBF00;   
+/* Styla länkarna */
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-menu a:hover {
+  color: #FFD700;
+}
+
+p {
+  font-size: clamp(14px, 2vw, 24px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+h1 {
+  font-size: clamp(30px, 7vw, 68px);
+}
+
+h2 {
+  font-size: clamp(28px, 6vw, 64px);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: clamp(26px, 5vw, 60px);
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .hero {
@@ -75,31 +139,41 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh; /* Justerar höjden till 80% av viewport-höjden */
+    height: 100vh; /* Justerar höjden till 100% av viewport-höjden */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff; /* Vit text för bättre kontrast mot bakgrunden */
-}
+  }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Halvgenomskinlig svart bakgrund för bättre läsbarhet */
+    background-color: #2F2F2F(0, 0, 0, 0.5); /* Halvgenomskinlig svart bakgrund för bättre läsbarhet */
+    width: 100%;
+    height: 100%;
     padding: 2rem;
-    border-radius: 10px;
-    max-width: 800px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Vit text för bättre kontrast mot bakgrunden */
+    
+    button {
+      background-color: #F5F5DC;
+      padding: 1rem 1.5rem;
+      color: #2F2F2F;
+    }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Bebas Neue", sans-serif;
-}
-
-h1 {
-    font-size: 4rem;
-}
+    a:hover {
+      color: #F5F5DC;
+    }
+    button:hover {
+      background-color: #FFBF00;
+    }
+  }
 
 button {
-    background-color: #FFBF00;
+    background-color: #8B0000;
     color: #fff;
     font-family: "Bebas Neue", sans-serif;
     font-size: 1.5rem;
@@ -107,6 +181,7 @@ button {
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
     cursor: pointer;
+    margin: 1rem 0 1.5rem 0;
 }
 
 /* Stilar för formuläret för bättre läsbarhet */
@@ -126,11 +201,6 @@ form {
 /* Vinbarer sektion */
 .vinbarer {
   padding: 2rem 1rem;
-}
-
-.vinbarer h2 {
-  text-align: center;
-  margin-bottom: 2rem;
 }
 
 .vinbarer-container {
@@ -187,15 +257,9 @@ form {
 }
 
 
-
 /* Vinskolan sektion */
 .vinskolan {
   padding: 2rem 1rem;
-}
-
-.vinskolan h2 {
-  text-align: center;
-  margin-bottom: 2rem;
 }
 
 .vinskolan-container {
@@ -248,6 +312,10 @@ form {
   text-decoration: underline;
 }
 
+.vinklubben {
+  padding: 2rem 1rem;
+}
+
 
 
 /* Footer-specifika stilar */
@@ -289,39 +357,40 @@ form {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
-
-
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-.button-login {
-    background-color: #FFBF00;
-    color: #8B0000;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button-login a {
-    color: #8B0000;
-    text-decoration: none;
-}
-
-.button-login:hover {
-    background-color: #FFD700;
-}
-
 /* Media queries */
 @media screen and (min-width: 600px) {
+   .hamburger {
+        display: none; /* Dölj hamburgermenyn */
+    }
+    .nav-menu {
+      display: flex; /* Visa navigationen */
+      position: static; /* Återställ position */
+      flex-direction: row;
+      align-items: center; /* Centrera vertikalt */
+      justify-content: space-between; /* Centrera innehållet horisontellt */
+  }
+    .nav-menu ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center; /* Centrera vertikalt */
+      height: 100%; /* Fyll ut hela höjden */
+      margin: 0;
+  }
+
+  .nav-menu ul li {
+    margin: 0;
+    height: 100%; /* Fyll ut hela höjden */
+    display: flex;
+    align-items: center; /* Centrera länktexten vertikalt */
+}
+.button-login {
+  margin-top: 0; /* Justera för att ligga i linje */
+  margin-left: auto; /* Flytta login-knappen till höger */
+}
+.site-logo {
+  margin-right: 1rem; /* Lägg till lite mellanrum mellan loggan och menyn */
+}
     .vinbarer-container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -333,12 +402,9 @@ form {
         justify-content: space-between;
         align-items: center;
     }
-    .footer-nav ul {
-        margin: 0;
-    }
   }
   
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 800px) {
     .vinbarer-container {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -355,47 +421,3 @@ form {
         grid-template-columns: repeat(4, 1fr);
       }
   }
-
-  @media screen and (max-width: 768px) {
-    nav {
-        position: relative;
-    }
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #8B0000;
-        padding: 1rem;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-
-    .nav-menu ul li {
-        margin: 0.5rem 0;
-    }
-
-    .button-login {
-        margin-top: 0.5rem;
-    }
-}
