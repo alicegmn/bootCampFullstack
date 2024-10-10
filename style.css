@@ -1,15 +1,428 @@
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+    font-style: oblique;
+  }
+
 body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5DC;
+    color: #2F2F2F;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Grundläggande styling för header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #8B0000;
+  color: #fff;
+  z-index: 1000;
+  font-family: "Bebas Neue", sans-serif;
 }
 
-h1 h2 h3 h4 h5 h6 {
-    font-family: bebas neue;
+/* Grundläggande styling för navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  height: 7vh;
 }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Logo styling (i hedaer och footer ) */
+.site-logo a {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Hamburger-meny för små skärmar */
+.hamburger {
+  display: block;
+  background: none;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+}
+
+/* Nav-meny för små skärmar */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #8B0000;
+  padding: 1rem;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Visa nav-menyn när den är aktiv */
+.nav-menu.active {
+  display: flex;
+}
+
+/* Styla länkarna */
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-menu a:hover {
+  color: #FFD700;
+}
+
+p {
+  font-size: clamp(14px, 2vw, 24px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+h1 {
+  font-size: clamp(30px, 7vw, 68px);
+}
+
+h2 {
+  font-size: clamp(28px, 6vw, 64px);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: clamp(26px, 5vw, 60px);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hero {
+    background-image: url('/images/vinglas\ -\ drickavin.se.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Justerar höjden till 100% av viewport-höjden */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+.hero-content {
+    background-color: #000(0, 0, 0, 0.5); /* Halvgenomskinlig svart bakgrund för bättre läsbarhet */
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Vit text för bättre kontrast mot bakgrunden */
+  }
+
+button {
+    background-color: #8B0000;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin: 1rem 0 1.5rem 0;
+    align-self: center;
+}
+
+button:hover {
+  background-color: #F5F5DC;
+  border: 2px solid #8B0000;
+  color: #8B0000;
+  transition: background-color 0.3s ease;
+}
+
+/* Stilar för formuläret för bättre läsbarhet */
+form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 0.5rem;
+}
+
+/* Vinbarer sektion */
+.vinbarer {
+  padding: 2rem 1rem;
+}
+
+.vinbarer-intro {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.vinbarer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vinbarer-wrapper main {
+  grid-area: main;
+}
+
+.vinbarer-wrapper aside {
+  grid-area: aside;
+}
+
+.vinbarer-wrapper {
+  margin-top: 8vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "main"
+  "aside";
+}
+
+.vinbarer-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.vinbarer-card:hover {
+  transform: translateY(-5px);
+}
+
+.vinbarer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.vinbarer-card-content {
+  padding: 1.5rem;
+}
+
+.vinbarer-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.vinbarer-card p {
+  margin-bottom: 1rem;
+}
+
+.vinbarer-card address {
+  font-style: normal;
+}
+
+.vinbarer-card a {
+  color: #8B0000;
+  text-decoration: none;
+}
+
+.vinbarer-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* Vinskolan sektion */
+.vinskolan {
+  padding: 2rem 1rem;
+}
+
+.vinskolan-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vinskolan-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.vinskolan-card:hover {
+  transform: translateY(-5px);
+}
+
+.vinskolan-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.vinskolan-card-content {
+  padding: 1.5rem;
+}
+
+.vinskolan-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.vinskolan-card p {
+  margin-bottom: 1rem;
+}
+
+.vinskolan-card a {
+  color: #8B0000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.vinskolan-card a:hover {
+  text-decoration: underline;
+}
+
+.vinklubben {
+  padding: 2rem 1rem;
+}
+
+/* Footer-specifika stilar */
+.site-footer {
+    background-color: #8B0000;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFBF00;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Media queries */
+@media screen and (min-width: 600px) {
+   .hamburger {
+        display: none; /* Dölj hamburgermenyn */
+    }
+
+    header {
+      padding: 1rem;
+    }
+
+    nav {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+    }
+    .nav-menu {
+      padding: 0;
+      display: flex; /* Visa navigationen */
+      position: static; /* Återställ position */
+      flex-direction: row;
+      align-items: center; /* Centrera vertikalt */
+      justify-content: center;
+      align-content: center;
+      }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+  }
+
+.site-logo {
+  margin-right: 1rem; /* Lägg till lite mellanrum mellan loggan och menyn */
+}
+    .vinbarer-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .vinskolan-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    .vinbarer-wrapper {
+      grid-template-columns: (3fr 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+      "main" "main" "main" "aside";
+    }
+
+    .vinbarer-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .vinskolan-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .vinbarer-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .vinskolan-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+  }
